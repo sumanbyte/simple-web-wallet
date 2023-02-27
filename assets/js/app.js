@@ -148,6 +148,14 @@ const loadFromPrivateKey = async () => {
   return wallet;
 };
 
+const signMessage = ()=>{
+  let wallet = getEncryptedWallet();
+  let inputMsg = document.getElementById('inputMsg').value;
+  let signedMessage = wallet.signMessage(inputMsg);
+  let signedMessageSpan = document.getElementById('signedMessage')
+  signedMessageSpan.innerText = signedMessage;
+}
+
 const toggleCheckPasscodeModal = () => {
   resetPasscodeFields();
   $('#mdlCheckPasscode').modal('toggle');

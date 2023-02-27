@@ -38,6 +38,8 @@ const getCurrentNetwork = () => {
   return localStorage.getItem('currentNetwork');
 };
 
+
+
 const resetSendForm = () => {
   $('#inputSendToAddress').val('');
   $('#inputAmount').val('');
@@ -79,6 +81,11 @@ const networks = [
     url: 'https://goerli.infura.io/v3/ae22018377b14a61983be979df457b20',
     display: 'Rinkeby',
   },
+  {
+    name: 'mumbai',
+    url: 'https://rpc-mumbai.maticvigil.com/',
+    display: 'Mumbai Testnet'
+  }
 ];
 
 const getDefaultNetwork = () => {
